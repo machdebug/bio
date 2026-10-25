@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mach's homepage</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #171717;
+    color: #d6d6d6;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    cursor: url("./zenith.png") 16 16, auto;
+}
+
+a, button {
+    cursor: url("./zenith.png") 16 16, pointer;
+}
+
+main {
+    width: calc(100% - 32px);
+    max-width: 1000px;
+    margin: 80px auto;
+}
+
+h1, h2, h3, a, footer {
+    color: #b0ffb0;
+    text-shadow: 0 0 5px rgba(190, 150, 255, 0.28);
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 17px;
+    margin-top: 30px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 0 0 9px rgba(190, 150, 255, 0.65);
+}
+
+/* Text and album covers */
+.content-layout {
+    display: grid;
+    grid-template-columns: minmax(250px, 1fr) 1fr;
+    gap: 36px;
+    align-items: start;
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.album-link {
+    display: block;
+    width: 200px;
+    height: 200px;
+    line-height: 0;
+    border: 1px solid #39323d;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.album-cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #242124;
+}
+
+.album-link:hover {
+    border-color: #b0ffb0;
+    box-shadow: 0 0 10px rgba(190, 150, 255, 0.3);
+}
+
+footer {
+    margin-top: 50px;
+    opacity: 0.8;
+}
+
+/* Crimson Loftwing */
+#loftwing {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: auto;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 9999;
+    transform: scaleX(-1);
+    transform-origin: center center;
+    will-change: left, top, transform, opacity;
+}
+
+@media (max-width: 1100px) {
+    .album-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .album-link {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+}
+
+@media (max-width: 700px) {
+    main {
+        margin-top: 40px;
+    }
+
+    .content-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .album-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+</style>
+</head>
+
+<body>
+<main>
+    <div class="content-layout">
+        <section>
+            <h1>hi gamers</h1>
+
+            <p>mach's personal website</p>
+
+            <h2>about me</h2>
+            <p>fav genre: digicore &amp; midwest emo</p>
+            <p>hobbies: programming &amp; music prod</p>
+            <p>current hyperfixation: terraria</p>
+        </section>
+
+        <section>
+            <h2>album covers</h2>
+
+            <div class="album-grid">
+                <a class="album-link"
+                   href="https://open.spotify.com/album/5thuzA36c04px5bVcMzebr?si=8lo5RMK1QE6Tk0OCbMByvg"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open Spotify album 1">
+                    <img class="album-cover" src="./album1.jpg" alt="Album cover 1">
+                </a>
+
+                <a class="album-link"
+                   href="https://open.spotify.com/album/64EfqWjy3dCUSSSqexQsZ5?si=VxS06fAsQwq0M_zHXZdScQ"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open Spotify album 2">
+                    <img class="album-cover" src="./album2.jpg" alt="Album cover 2">
+                </a>
+
+                <a class="album-link"
+                   href="https://open.spotify.com/album/6XV76W17coHAKFdeyiGT08?si=xCM1yvvZRxmnU6R3KQksXQ"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open Spotify album 3">
+                    <img class="album-cover" src="./album3.jpg" alt="Album cover 3">
+                </a>
+
+                <a class="album-link"
+                   href="https://open.spotify.com/album/4YKm0gBgvrjq1tmKYzF961?si=KnHmGK4iQwGUBVYKZw4Bzw"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open Spotify album 4">
+                    <img class="album-cover" src="./album4.jpg" alt="Album cover 4">
+                </a>
+
+                <a class="album-link"
+                   href="https://open.spotify.com/album/1vt6o574MwqdmPm8ktkT7s?si=FC6hx3eqQ3uVFrsSGPnnSA"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open Spotify album 5">
+                    <img class="album-cover" src="./album5.jpg" alt="Album cover 5">
+                </a>
+
+                <a class="album-link"
+                   href="https://open.spotify.com/album/4SZko61aMnmgvNhfhgTuD3?si=FUb4Hyf7RcW5oKMk2pPp2g"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open Spotify album 6">
+                    <img class="album-cover" src="./album6.jpg" alt="Album cover 6">
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer>made by mach with &lt;3</footer>
+</main>
+
+<img id="loftwing" src="./crimsonloftwing.gif" alt="Crimson Loftwing">
+
+<script>
+const loftwing = document.getElementById("loftwing");
+
+const random = (min, max) => Math.random() * (max - min) + min;
+
+let active = false;
+
+function flyLoftwing() {
+    if (active) return;
+
+    active = true;
+
+    const width = 110;
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+
+    // Always fly from left to right.
+    const startX = -width - 20;
+    const endX = screenWidth + width + 20;
+
+    const startY = random(20, Math.max(30, screenHeight - 100));
+    const endY = random(20, Math.max(30, screenHeight - 100));
+
+    const duration = random(4000, 7000);
+    const startTime = performance.now();
+
+    loftwing.style.visibility = "visible";
+    loftwing.style.opacity = "1";
+
+    function animate(now) {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const eased = progress * progress * (3 - 2 * progress);
+
+        const x = startX + (endX - startX) * progress;
+        const y = startY + (endY - startY) * eased;
+
+        // Keep Loftwing upright.
+        let angle = Math.atan2(endY - startY, endX - startX);
+
+        if (angle > Math.PI / 2) angle -= Math.PI;
+        if (angle < -Math.PI / 2) angle += Math.PI;
+
+        loftwing.style.left = `${x}px`;
+        loftwing.style.top = `${y}px`;
+        loftwing.style.transform = `rotate(${angle}rad) scaleX(-1)`;
+
+        // Fade out near the end of the flight.
+        if (progress > 0.88) {
+            loftwing.style.opacity = String((1 - progress) / 0.12);
+        }
+
+        if (progress < 1) {
+            requestAnimationFrame(animate);
+        } else {
+            loftwing.style.opacity = "0";
+            loftwing.style.visibility = "hidden";
+            active = false;
+
+            // Spawn again after a short pause.
+            setTimeout(flyLoftwing, random(1000, 4000));
+        }
+    }
+
+    requestAnimationFrame(animate);
+}
+
+// First appearance shortly after the page loads.
+setTimeout(flyLoftwing, 1000);
+</script>
+</body>
+</html>
